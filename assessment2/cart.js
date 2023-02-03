@@ -36,8 +36,8 @@ const cart = [
 //CODE HERE
 
 const summedPrice = cart.reduce(function(acc, curr){
-    return acc + curr
-})
+    return acc + curr.price
+},0)
 console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
@@ -56,11 +56,13 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-const calcFinalPrice = cart.map(function(price) {
-    return price * .06
-})
+const calcFinalPrice = (cartTotal,couponValue,tax) => {
+    let taxAdded = cartTotal + (cartTotal * tax)
+    let finalPrice = taxAdded - couponValue
+    return finalPrice
+}
 
-console.log(calcFinalPrice)
+console.log(calcFinalPrice(summedPrice, 10, .06))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -83,8 +85,12 @@ console.log(calcFinalPrice)
 
 /*
     TEXT ANSWER HERE
-
+    name -- string -- We want this property to track out customer names -- names are saved as strings
+    email -- string -- add customers to mailing list -- needs to be a string to be stored properly
+    age -- number -- keep track of customer details -- needs to be a number
+    favorite items -- array -- array tracking the customers top 3 food chocies
 */
+
 
 /*
     Now, create a customer object following your own
@@ -92,3 +98,9 @@ console.log(calcFinalPrice)
 */
 
 //CODE HERE
+let customer = {
+    name: 'Mr Customer',
+    email: 'customer@customers.mail',
+    age: 28,
+    favoritesFoods: ['Pizza','Curly Fires','cheezecake']
+}

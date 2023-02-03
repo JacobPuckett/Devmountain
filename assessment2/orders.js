@@ -31,17 +31,17 @@
 
 //CODE HERE
 class Ticket {
-    constructor(item, orderTime, customerId, status){
+    constructor(item, orderTime, customerId){
         this.item = item
         this.orderTime = orderTime
         this.customerId = customerId
-        this.status = status
+        this.status = "queued"
     }
     updateStatus(newStatus) {
         
         this.status = newStatus
         
-        console.log(`The order for customer ${this.customerId} is now ${this.status}`)
+        console.log(`The order for customer ${this.customerId} is now ${this.status} to ${newStatus}`)
      }
 }
 

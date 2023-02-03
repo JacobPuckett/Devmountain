@@ -34,11 +34,11 @@
 
  let pizza = {
     name: 'pepporoni',
-    price: 10,
+    price: 8.90,
     category: 'entree',
-    popularity: 10,
+    popularity: 1,
     rating: 10,
-    tags: 'kids, gluten-free'
+    tags: ['Delicious', "Life Changeing","Magical"]
  }
 
 //////////////////PROBLEM 2////////////////////
@@ -60,7 +60,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-console.log(pizza.tags)
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -72,6 +72,7 @@ console.log(pizza.tags)
 //CODE HERE
 
 let {price} = pizza
+console.log(price)
 /*
     Fourth, and last, destructure the category
     property.
@@ -97,14 +98,57 @@ console.log(category)
 
 //CODE HERE
 // let foodArr = ['pepporni', 11, 'entree', 12, 13, 'kids']
-let foodArr = [{
-    name: 'Potato',
-    price: 5,
-    category: 'side',
-    popularity: 9,
-    tags: ['Mashed, Baked']
-}]
+// let foodArr = [{
+//     name: 'Potato',
+//     price: 5,
+//     category: 'side',
+//     popularity: 9,
+//     tags: ['Mashed, Baked']
+// }]
 
+let foodArr  = [
+
+ {
+    name: 'pepporoni',
+    price: 8.90,
+    category: 'entree',
+    popularity: 1,
+    rating: 10,
+    tags: ['Delicious', "Life Changeing","Magical"]
+ },
+ {
+    name: 'pepporoni',
+    price: 8.90,
+    category: 'entree',
+    popularity: 1,
+    rating: 10,
+    tags: ['Delicious', "Life Changeing","Magical"]
+ },
+ {
+    name: 'Veggie Lovers',
+    price: 7.99,
+    category: 'entree',
+    popularity: 12,
+    rating: 6,
+    tags: ['soulless', "Dry","healthy"]
+ },
+ {
+    name: 'pepporoni',
+    price: 8.90,
+    category: 'entree',
+    popularity: 1,
+    rating: 10,
+    tags: ['Delicious', "Life Changeing","Magical"]
+ },
+ {
+    name: 'pepporoni',
+    price: 8.90,
+    category: 'entree',
+    popularity: 1,
+    rating: 10,
+    tags: ['Delicious', "Life Changeing","Magical"]
+ }
+]
 //////////////////PROBLEM 4////////////////////
 /* 
     Let's filter the food objects according
@@ -118,13 +162,10 @@ let foodArr = [{
 */
 
 //CODE HERE
-
-
-const filteredFood = foodArr.filter((element) =>{
-  return element.tags
-})
-
+const filteredFood = foodArr.filter((pizzaObj) => pizzaObj.tags.includes("soulless"))
 console.log(filteredFood)
+
+
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -166,11 +207,23 @@ console.log(filteredFood)
 */
 
 //CODE HERE
-const filterByProperty = foodArr.filter((element) => {
-    if (element > 4){
+// const filterByProperty = foodArr.filter((element) => {
+//     if (element > 4){
         
-    }
-})
+//     }
+// })
+const fillterByProperty = (property,number,type) => {
+    let filteredArr = foodArr.filter((pizzaObj) => {
+        if(type === 'below'){
+            return pizzaObj[property] < number
+        }else{
+            return pizzaObj[property] > number
+        }
+    })
+    return filteredArr
+}
+
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -180,4 +233,4 @@ const filterByProperty = foodArr.filter((element) => {
 */
 
 //CODE HERE
-console.log(filterByProperty)
+console.log(fillterByProperty("price",10,"below"))
