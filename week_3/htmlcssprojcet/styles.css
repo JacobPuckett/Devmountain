@@ -24,6 +24,8 @@ header {
   img {
     align-items: center;
     box-shadow: 0px 0px 20px;
+    border: 1px solid black;
+    
   }
 
  footer{
@@ -41,4 +43,9 @@ header {
 
  table {
     border: 1px solid black;
+ }
+ button {
+  border-radius: 20px;
+  color: red;
+  background-color: blue;
  }
