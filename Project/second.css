@@ -1,0 +1,62 @@
+#first{
+    height: 300px;
+    width: 1550px;
+    background-color: #fdf7f7;
+    border: 5px solid black;    
+}
+
+#second{
+    height: 150px;
+    width: 50px;
+    background-color: purple;
+    position: relative;
+    bottom: 180px;
+    left: 15px
+}
+#third{
+    background-color: green;
+    height: 250px;
+    width: 500px;
+    position: relative;
+    bottom: 430px;
+    left: 105px
+}
+#forth{
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 630px;
+    left: 715px
+}
+#doted{
+    height: 300px;
+    width: 1550px;
+    background-color: white;
+    border: 5px dotted black;   
+    position: relative;
+    bottom: 500px
+}
+#skin{
+    height: 230px;
+    width: 1500px;
+    background-color: tan;
+    position: relative;
+    bottom: 770px;
+    left: 25px;
+    box-shadow: 12px 12px 4px 4px #181616;
+}
+#Hello{
+    height: 230px;
+    width: 500px;
+    box-shadow: 1px 1px 1px 1px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 600px;
+    left: 400px;
+    font-weight: bold;
+    color: rgb(28, 28, 95)
+}

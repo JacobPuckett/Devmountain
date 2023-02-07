@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+}
+header {
+    background-color: #D8D8D8;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  .box {
+    background-color: #328bf1;
+    width: 75px;
+    height: 75px;
+    
+  }
+  p {
+    padding: 40px;
+  }
+  .line1 {
+    background-color: #4A90E2;
+    height: 25vh;
+  }
+  
+  .line2 {
+    background-color: #50E3C2;
+    height: 25vh;
+  }
+  
+  .line3 {
+    background-color: #B8E986;
+    height: 25vh;
+  }
+  
+  .line4 {
+    background-color: #F8E71C;
+    height: 25vh;
+  }
