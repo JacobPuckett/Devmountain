@@ -1,0 +1,67 @@
+CREATE TABLE app (
+app_id SERIAL PRIMARY KEY,
+title VARCHAR(50)
+);
+
+
+CREATE TABLE groups (
+    app_id SERIAL PRIMARY KEY,
+    title VARCHAR(50)
+);
+
+
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    title VARCHAR(50)
+);
+
+
+
+username
+email
+password
+profile pic
+
+
+post text
+user posted
+photos
+
+comments
+user commeneted 
+
+groups
+group members
+group posts
+
+Tales
+
+user: store all user information
+
+posts: store all posts and related information
+
+follow: relationsships between followed useres
+
+photos: link/img and post is relates to
+
+comments: hold comments and related info (user/post)
+
+groups:group id and name
+gorupMemebers: names of memebers for each group
+
+
+
+one-to-one: posts <=> posts
+
+
+one-to-many:
+    users => following/followers
+    users => posts
+    users => comments
+
+
+
+many-to-many:
+    post <=> posttags
+    users ,=> gorupMemebers
+-- follow post text comment groups

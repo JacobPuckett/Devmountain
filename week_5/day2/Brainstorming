@@ -1,0 +1,127 @@
+Users
+
+recipes
+ingredients
+instrucitons
+public/private
+usersRecipes
+grocery list
+user occasoion
+recipes occasions
+
+
+user: sign in and create or view other recipes
+
+grocery: ingridents in list 
+
+grocery: instructions on meal prep
+
+user: add to cart, set to private/public
+
+occasions: When to cook
+
+---Table Ideas---
+
+User - holds info about the user
+recipe - ingredients to make a meal
+ingredient - thing we can add to our recipe
+occasion - holds what occasoioin would be best
+instrucions - on how to make it
+grocery - list of the grocery we buy
+public/private
+
+one-to-one
+
+
+one-to-many
+user => igredient - one user has access to multiple differnet igridents
+user => recipe - one user has access to multiple differnet resipes
+
+
+many-to-many
+recipe => igredient
+
+
+
+--Columns--
+
+-Users-
+    user_id - to identify user and what data he has
+    username - to identify users
+    email - for user comunication
+    password - user security
+
+
+-Recipes-
+    recipe_id - each recipe will be given its own id and stored with that id and called by this id
+    user_id - to collect data on which resipe the user intrested in
+    text - to filter what the user is looking for
+    instrucions - to file what is needed to finished the recipe
+    public - is to determed to be set to public or private
+    occaoin_id - is what the recipes occain is for example: birthday party
+
+
+-ingredient-
+    item - to label and sort through any ingredient
+    ingredient_id - to show which ingredients are avaliable
+
+
+-grocery-
+    grocery_id - its a list of whats needed
+    user_id - that users list 
+    ingredients - the ingredients needed for a recipe
+
+-recipe-ingredients-
+    rec_ing_id - combination fo all igredients and recipes avaibable
+    recipe_id - the igredients needed 
+    ingredients_id - all avaiable products
+
+
+-Occasion-
+    occasion_id - all avaiable occasion for example: birthday party
+    type - the specific occasions
+
+
+    -- CREATE TABLE users (
+-- 	user_id SERIAL PRIMARY KEY,
+--   username varchar(255),
+--   email varchar(255),
+--   password varchar(255)
+-- );
+
+-- CREATE TABLE recipes(
+-- 	recipe_id SERIAL PRIMARY KEY,
+--   user_id int NOT NULL REFERENCES users(user_id),
+--   instrucion varchar(255),
+--   content varchar(255),
+--   public boolean,
+--   occasions_id int NOT NULL REFERENCES occasions(ocassion_id)
+-- );
+	  
+--   CREATE TABLE occaions (
+--   	occaion_id SERIAL PRIMARY KEY,
+--     type varchar(255)
+--   );
+
+-- CREATE TABLE ingredient (
+-- 	ingredient_id SERIAL PRIMARY KEY,
+--   item varchar(255)
+-- );
+
+
+-- CREATE TABLE recipe_igredients (
+-- 	rec_igr_id SERIAL PRIMARY KEY,
+--   recipe_id int NOT NULL REFERENCES recipes(recipe_id),
+--   ingredient_id int NOT NULL REFERENCES ingredient(user_id),
+-- );
+
+
+-- CREATE TABLE groceries (
+-- 	grocerie_id SERIAL PRIMARY KEY,
+--   user_id int NOT NULL REFERENCES users(user_id),
+--   ingredient_id int NOT NULL REFERENCES ingredient(ingredient_id),
+-- );
+
+
+
+
